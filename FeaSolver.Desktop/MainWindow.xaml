@@ -1,0 +1,30 @@
+<Window x:Class="FeaSolver.Desktop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2003/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2003/xaml"
+        xmlns:h="http://helix-toolkit.org/wpf"
+        Title="Jules FEA - STL Solver" Height="600" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Margin="10">
+            <Button Content="Import STL" Click="ImportSTL_Click" Margin="0,0,0,10"/>
+            <Button Content="Generate Mesh" Click="GenerateMesh_Click" Margin="0,0,0,10"/>
+            <Separator Margin="0,10"/>
+            <TextBlock Text="Material:"/>
+            <ComboBox x:Name="MaterialCombo" SelectedIndex="0">
+                <ComboBoxItem Content="Steel (Elastic)"/>
+                <ComboBoxItem Content="Steel (Von Mises)"/>
+            </ComboBox>
+            <Separator Margin="0,10"/>
+            <Button Content="Run Simulation" Click="RunSim_Click"/>
+        </StackPanel>
+
+        <h:HelixViewport3D x:Name="Viewport" Grid.Column="1">
+            <h:DefaultLights/>
+            <ModelVisual3D x:Name="GeometryModel"/>
+        </h:HelixViewport3D>
+    </Grid>
+</Window>
