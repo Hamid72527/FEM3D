@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="FeaSolver.Core/FeaSolver.Core.csproj" />
+  <Project Path="FeaSolver.Desktop/FeaSolver.Desktop.csproj" />
+  <Project Path="FeaSolver.Tests/FeaSolver.Tests.csproj" />
+</Solution>

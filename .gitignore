@@ -1,0 +1,7 @@
+[Bb]in/
+[Oo]bj/
+*.swp
+*.user
+*.userosscache
+*.sln.docuser
+.vs/
